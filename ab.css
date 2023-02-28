@@ -1,0 +1,53 @@
+.produkt4e {
+    position: absolute;
+    display: block;
+    margin: auto;
+    justify-content: center;
+}
+
+.produkt4e img {
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.klasa {
+    margin-top: 25px;
+    display: block;
+}
+
+.row {
+    position: absolute;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    display: inline-flex;
+    width: 100%;
+}
+
+.eden {
+    color: black;
+    position: relative;
+    /* right: 1%;
+    left: 1%;
+    top: 80%;    */
+}
+
+.course-col {
+    position: relative;
+    margin: 0;
+    background-color: white;
+    box-shadow: grey;
+}
+
+.course-c0l:hover{
+    box-shadow: 0 0 5px 0px rgba(0 0 0 0.2);
+}
+
+@media (max-width: 1024px){
+    .produkt4e {
+        margin-left: 73px !important;
+    }
+}
+
+

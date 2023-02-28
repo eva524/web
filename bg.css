@@ -1,0 +1,174 @@
+
+.alien {
+    display: inline-flex;
+    margin: auto;
+    margin-left: 90px;
+}
+
+.poster {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.start {
+    justify-content: center;
+    display: flex;
+    content: "";
+    margin: auto;
+    width: 90%;
+}
+
+.ime {
+    opacity: 0.6;
+}
+
+.pochni {
+    width: 75%;
+    display: flex;
+    margin: auto;
+}
+
+.poch {
+    gap: 2rem;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 20%;
+}
+
+.start img {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* @MEDIA */
+@media (max-width: 1440px) {
+    .modi{
+        width: 70%;
+    }
+
+    .modi {
+        margin-top: 15px;
+    }
+
+    .marsovec .sliki{
+        width: 50%;
+    }
+
+    .marsovec .lin {
+        display: none;
+    }
+
+    .marsovec {
+        margin-left: -10;
+    }
+
+    .marsovec .ri {
+        width: 100;
+        background: transparent;
+    }
+
+    .two .slid{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px){
+    .quo p{
+        width: 70%;
+    }
+
+    .tip .top p{
+        margin-left: -150px;
+    }
+
+    .marsovec {
+        margin-left: -80;
+    }
+}
+
+@media (max-width: 800px){
+    .quo{
+        display: block !important;
+        margin: 0 auto;
+        padding-left: 175px;
+        width: 80%;
+    }
+
+    .spisanie p{
+        font-size: 25px;
+    }
+
+    .quo p{
+        gap: none;
+    }
+}
+@media (max-width: 425px){
+    .spisanie p{
+        font-size: 25px !important;
+        margin-left: -40px;
+    }
+    .dvei p{
+        font-size: 20px;
+    }
+    .quo {
+       padding-left: 100px;
+        
+    }
+    .quo p{
+        width: 100%;
+        font-size: 18px;
+    }
+    .blok .amet {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        font-size: 18px !important;
+        margin-left: 20;
+        margin-right: 20;
+    }
+    .kolekci {
+        text-align: center;
+        font-size: 25px !important;
+    }
+    .poch{
+        display: block;
+    }
+    .start img {
+        width: 70% !important;
+    }
+    .ime {
+        font-size: 20px !important;
+    }
+    .mars {
+        font-size: 20px !important;
+    }
+    .tip .top p{
+        font-size: 20px;
+    }
+    .tip .course-col{
+        width: auto;
+    }
+    .tip .name {
+        text-align: center;
+    }
+}
+@media (max-width: 375px){
+    .blok {
+        display: block !important;
+    }
+    .sliki {
+        margin-top: 0px !important;
+        margin-left: 170px;
+    }
+    .amet {
+        padding-top: 0px !important;
+    }
+}
+@media (max-width:320px){
+    .marsovec{
+    margin-left: -95px !important;
+    }
+}

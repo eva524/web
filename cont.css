@@ -1,0 +1,89 @@
+
+.lokacija {
+    display: block;
+    margin: 0 auto;
+}
+
+.lok {
+    margin-left: 160px;
+}
+
+.lokacija img {
+    margin: 0 auto;
+    content: " ";
+    width: 100%;
+    border: 1px solid;
+}
+
+.l0k {
+    text-align: center;
+    display: inline-flex;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    
+}
+
+.lay3r {
+    margin: 0 auto;
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+}
+
+.l0k:hover{
+    background: none;
+}
+
+.l0k:hover{
+    opacity: 0;
+}
+
+.l0k {
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*stapi vo kontakt*/
+.stapi {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 130px;
+}
+
+.colA {
+    width: 100%;
+    margin: 0 auto;
+    color: white;
+}
+
+.linija {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.odidesno {
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 30%;
+}
+
+.odidesno img {
+    z-index: -1;
+}
+
+

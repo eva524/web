@@ -1,0 +1,167 @@
+<DOCTYPE HTML>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>WEB</title>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="contact" href="cont.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+
+        <body>
+            <header>
+            <div class="primary head">
+                <div class="logo center"><img src="img/evs.webp" alt="Logo"></div>
+                <nav class="nav-list">
+                    <nav class="primary-navigacija">
+                        <ul class="nav-lists" area-label="navigation" role="list">
+                            <i class="fas" onclick="hideMenu()"></i>
+                            <li><a href="novo.html">ПOЧЕТНА </a></li>
+                                <!-- Dropdown menu -->
+                                <div class="drop" style="display: inline-block;">
+                                <li class="nav-item nav-item-dropdown" >
+                                    <a class="dropdown-trigger" href="#" style="color: white;">ПРОДАВНИЦА</a>
+                                    <ul class="dropdown-menu" style="z-index:1; margin-top: 52px; padding-top: 15px; padding-bottom: 10px; background-color: black;">
+                                        <li class="dropdown-menu-item"><a href="shop.html">EVA</a></li>
+                                        <li class="dropdown-menu-item"><a href="blog.html">СПИСАНИЕ</a></li>
+                                    </ul>
+                                </li>
+                                </div> 
+                            <li><a href="about.html">ЗА НАС </a></li>
+                            <li><a href="contact.html">КОНТАКТ </a></li>                
+                        </ul>
+                    </nav>
+                        <i class="fas" onclick="showMenu()"></i>
+                </nav>
+
+                <!-- mobile -->
+                <div class="primary-header">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                                <img class="icon-hamburger" src="img/icon-hamburger.svg" alt="" aria-hidden="true">
+                                <img class="icon-close" src="img/icon-close.svg" alt="" aria-hidden="true">
+                            </button>
+                            <nav class="primary-navigation" id="primary-navigation">
+                                <ul area-label="Primary" role="list" class="nav-list">
+                                    <i class="fas" onclick="hideMenu()"></i>
+                                    <li><a href="novo.html">ПOЧЕТНА </a></li>
+                                    <li><a href="shop.html">EVA</a></li>
+                                    <li><a href="blog.html">СПИСАНИЕ</a></li>
+                                    <li><a href="about.html">ЗА НАС </a></li>
+                                    <li><a href="contact.html">КОНТАКТ </a></li>  
+                                    <li>
+                                        <div class="mob" style="padding-right: 11px;"> 
+                                            <button class="naj button" data-type="inverted" style="font-size: 1.2rem; margin-right: 80px;" onclick="document.getElementById('id01').style.display='block'">Најави се</button>
+                                            <div id="id01" class="modal | center | text-center">
+                                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                            <form class="modal-content animate | center | text-center">
+                                            <div class="container | center | text-center" style="color: white; font-size: 20px;">
+                                            <label for="uname"><b>Корисничко Име</b></label>
+                                            <input type="text" placeholder="Enter Username" name="uname" required><br>
+                                            <label for="psw"><b>Лозинка</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required><br>
+                                            <div class="pricni center" style="display: inline-flex; margin:0 auto; font-size: 18; width: 100%;">
+                                                <button type="submit" class="log">Најави се</button>
+                                                <button type="submit" class="sig">Креирај Профил</button>
+                                                <button type="button" class="can" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Откажи</button>
+                                            </div>
+                                            </div>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </li>              
+                                </ul>
+                            </nav>
+                                     <i class="fas" onclick="showMenu()"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="najava" style="padding-right: 11px; margin-top: 10px;"> 
+                    <button class="button" data-type="inverted" style="font-size: 1.2rem; margin-right: 80px;" onclick="document.getElementById('id02').style.display='block'">Најави се</button>
+                    <div id="id02" class="modal | center | text-center">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content animate | center | text-center">
+                    <div class="container | center | text-center" style="color: white; font-size: 20px;">
+                    <label for="uname"><b>Корисничко Име</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required><br>
+                    <label for="psw"><b>Лозинка</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required><br>
+                    <div class="pricni | center" style="display: inline-flex; margin:0 auto; margin-left: -67px; font-size: 18; width: 130%;">
+                        <button type="submit" class="log">Најави се</button>
+                        <button type="submit" class="sig">Креирај Профил</button>
+                        <button type="button" class="can" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Откажи</button>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+            <div><button onclick="topFunction()" id="myBtn" title="Go to top">^</button></div>
+
+            <section class="lok" style="padding-top: 50px;">
+                <div class="lokacija" style="display: flex;">
+                    <div class="odidesno center text-center" style="margin-top: 100px;">
+                            <div class="kont">
+                                <p style="font-size: 30px; ">СТАПИ ВО КОНТАКТ</p>
+                                <hr width="100%" color="black">
+                            </div> 
+
+                            <div class="linija">
+                                <p style="font-size: 22px; margin-top: 20px;">Tелефон <i class="fa-solid fa-phone" style="color: #5C5CFF;"></i></p>
+                                <p style="margin-top: 5px; font-size: 20px;">+389 111 222 555<br></p> 
+                            </div>
+
+                           <hr width="89%" color="#B0B0B0">
+                           <div class="linija">
+                               <p style="margin-top: 15px; font-size: 22px;">Емаил <i class="fa-solid fa-envelope" style="color: #B24BF3"></i></p>
+                               <p style="margin-top: 5px; font-size: 20px;">jane.doe@johndoehub.com<br></p>  
+                           </div>
+                           
+                           <hr width="79%" color="#B0B0B0">
+                           <div class="linija">
+                                <p style="margin-top: 15px; font-size: 22px;">Адреса <i class="fa-solid fa-location-dot" style="color: #D10000;"></i></p>
+                                <p style="margin-top: 5px; font-size: 20px;">St. Robert, MO 65584-5678<br></p>  
+                            </div>
+                        <hr width="68%" color="#B0B0B0">
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="footer foot" style="margin-top: 180px;">
+                    <div class="logo-kraj | center">
+                         <img src="img/evs.webp" alt="logo">
+                    </div>
+                    <nav class="footer-nav | center">
+                        <ul class="flow" style="--flow-spacer: 1em" aria-label="Footer" role="list">
+                            <li><a href="novo.html">Почетна</a></li>
+                            <li><a href="shop.html">Продукти</a></li>
+                            <li><a href="about.html">Заедница</a></li>
+                            <li><a href="contact.html">Контакт</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social | center">
+                        <ul class="ult" role="list" aria-label="Social links">
+                            <li><a aria-label="facebook" href="https://www.facebook.com/theperfumeshoponline" target="_blank">
+                                <i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a aria-label="twitter" href="https://twitter.com/theperfumeshop" target="_blank">
+                                <i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a aria-label="instagram" href="https://www.instagram.com/theperfumeshop/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a aria-label="youtube" href="https://www.youtube.com/user/ThePerfumeShopOnline" target="_blank">
+                                <i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a aria-label="pinterest" href="https://www.pinterest.com/the_perfume_shop/" target="_blank">
+                                <i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+            <script rel="javascript" src="./main.js"></script>
+        </body>
+    </html>

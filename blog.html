@@ -1,0 +1,380 @@
+<DOCTYPE HTML>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>WEB</title>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="bg.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+
+        <body>
+
+            <header>
+            <div class="primary head" style="height: 77.3px; top: 0.2;">
+                <div class="logo center"><img src="img/evs.webp" alt="Logo"></div>
+                <nav class="nav-list">
+                    <nav class="primary-navigacija">
+                        <ul class="nav-lists" area-label="navigation" role="list">
+                            <i class="fas" onclick="hideMenu()"></i>
+                            <li><a href="novo.html">ПOЧЕТНА </a></li>
+                            <!-- Dropdown menu -->
+                            <div class="drop" style="display: inline-block;">
+                            <li class="nav-item nav-item-dropdown" >
+                                <a class="dropdown-trigger" href="#" style="color: white;">ПРОДАВНИЦА</a>
+                                <ul class="dropdown-menu" style="z-index:1; margin-top: 52px; padding-top: 15px; padding-bottom: 10px; background-color: black;">
+                                    <li class="dropdown-menu-item"><a href="shop.html">EVA</a></li>
+                                    <li class="dropdown-menu-item"><a href="blog.html">СПИСАНИЕ</a></li>
+                                </ul>
+                            </li>
+                            </div> 
+                            <li><a href="about.html">ЗА НАС </a></li>
+                            <li><a href="contact.html">КОНТАКТ </a></li>                
+                        </ul>
+                    </nav>
+                            <i class="fas" onclick="showMenu()"></i>
+                </nav>
+
+                <!-- mobile -->
+                <div class="primary-header">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                                <img class="icon-hamburger" src="img/icon-hamburger.svg" alt="" aria-hidden="true">
+                                <img class="icon-close" src="img/icon-close.svg" alt="" aria-hidden="true">
+                            </button>
+                            <nav class="primary-navigation" id="primary-navigation">
+                                <ul area-label="Primary" role="list" class="nav-list">
+                                    <i class="fas" onclick="hideMenu()"></i>
+                                    <li><a href="novo.html">ПOЧЕТНА </a></li>
+                                    <li><a href="shop.html">EVA</a></li>
+                                    <li><a href="blog.html">СПИСАНИЕ</a></li>
+                                    <li><a href="about.html">ЗА НАС </a></li>
+                                    <li><a href="contact.html">КОНТАКТ </a></li>  
+                                    <li>
+                                        <div class="mob" style="padding-right: 11px;"> 
+                                            <button class="naj button" data-type="inverted" style="font-size: 1.2rem; margin-right: 80px;" onclick="document.getElementById('id01').style.display='block'">Најави се</button>
+                                            <div id="id01" class="modal | center | text-center">
+                                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                            <form class="modal-content animate | center | text-center">
+                                            <div class="container | center | text-center" style="color: white; font-size: 20px;">
+                                            <label for="uname"><b>Корисничко Име</b></label>
+                                            <input type="text" placeholder="Enter Username" name="uname" required><br>
+                                            <label for="psw"><b>Лозинка</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required><br>
+                                            <div class="pricni center" style="display: inline-flex; margin:0 auto; font-size: 18; width: 100%;">
+                                                <button type="submit" class="log">Најави се</button>
+                                                <button type="submit" class="sig">Креирај Профил</button>
+                                                <button type="button" class="can" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Откажи</button>
+                                            </div>
+                                            </div>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </li>              
+                                </ul>
+                            </nav>
+                                     <i class="fas" onclick="showMenu()"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="najava" style="padding-right: 11px; margin-top: 10px;"> 
+                    <button class="button" data-type="inverted" style="font-size: 1.2rem; margin-right: 80px;" onclick="document.getElementById('id02').style.display='block'">Најави се</button>
+                    <div id="id02" class="modal | center | text-center">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <form class="modal-content animate | center | text-center">
+                    <div class="container | center | text-center" style="color: white; font-size: 20px;">
+                    <label for="uname"><b>Корисничко Име</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required><br>
+                    <label for="psw"><b>Лозинка</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required><br>
+                    <div class="pricni | center" style="display: inline-flex; margin:0 auto; margin-left: -67px; font-size: 18; width: 130%;">
+                        <button type="submit" class="log">Најави се</button>
+                        <button type="submit" class="sig">Креирај Профил</button>
+                        <button type="button" class="can" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Откажи</button>
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+            <div><button onclick="topFunction()" id="myBtn" title="Go to top">^</button></div>
+
+            <div class="spisanie center text-center" style="font-size: 53px; padding-top: 150px; letter-spacing: 10px;"><p>СПИСАНИЕ</p></div>
+            <div class="dvei center text-center" style="font-size: 40px; margin-top: 50px; letter-spacing: 1px;"><p>Најново 2023</p></div>
+
+            <div class="quo center text-center" style="width: 100%; display: flex; margin: auto; gap: 3rem; justify-content: center;">
+                <div class="modi" style="font-size: 22px; text-align: justify;"><p>Вашиот потпис мирис е длабоко личен избор. Вистинскиот мирис има моќ да подигне и инспирира доверба; исто така може да ги зајакне спомените од минатото кои ви се драги.</p></div>
+                <div class="modi" style="font-size: 22px; text-align: justify;"><p>Додека ја започнувате новата година, зошто да не размислите да го промените вашиот мирис за да одговара на вашите нови аспирации и резолуции? Овде ги следиме најновите мириси.</p></div>
+                <div class="modi" style="font-size: 22px; text-align: justify;"><p>Сето тоа сигурно ќе инспирира и, што е уште поважно, ќе остави позитивен прв впечаток, изразувајќи го вашето расположение и личност пред да се поздравите со кого и да е во собата.</p></div>
+            </div>
+
+            <div class="video center" style="margin-top: 50px; ">
+                <video width="90%"  id="ocScreencapVideo" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" data-aos="fade-up">
+                    <source src="img/Alien Mugler EDP Perfume Commercial.mp4" type="video/mp4">
+                </video> 
+            </div> 
+
+            
+            <div style="font-size: 35px; margin-top: 10px; " class="mars center text-center"><p>ALIEN MUGLER</p></div>
+            <div class="blok" style="width: 100%; display: flex; justify-content: center;" class="center text-center">
+                <div class="amet" style="font-size: 22px; text-align: justify; padding-top: 70px; padding-left: 200px;"><p>Богатите и сензуални ноти на парфемот Alien ја рефлектираат женската сила: моќен цветен мирис на јасмин поврзан со дрвени и килибарни ноти. Alien е моќен и блескав. Неговиот енигматичен мирис открива универзален повик да се биде извонреден.</p></div>
+                <div class="marsovec center"> 
+                    <hr class="lin" color="grey" width="30%">
+                    <div class="sliki center" style="width: 30%; display: block; margin-top: -40px;">
+                        <div class="ri">
+                            <img src="img/5.webp">
+                        </div>
+                        <div class="ri">
+                            <img src="img/4.webp" alt="">
+                        </div>
+                        <div class="ri" style=" background: transparent;">
+                            <img src="img/zholto.png" alt="riri">
+                        </div> 
+                    </div>
+                </div>
+                <div class="amet" style="font-size: 22px; text-align: justify; padding-top: 70px; padding-right: 200px;"><p>Се враќа како заштитно лице на кампањата за другиот свет, пејачката, текстописец и активистка Вилоу Смит, која ја персонифицира етеричната вонземска божица на брендот.</p></div>
+            </div>
+
+            <div class="kolekci center text-center" style="font-size: 50px; margin-top: 65px; letter-spacing: 2px;"><p style="color: black;">КОЛЕКЦИИ</p></div>
+
+            <!-- SLIDER -->
+            <section class="two | center margi" style="margin-top: 35px">
+                <div class="slid">
+                        <ul class="slider | center">
+                            <li><img src="img/maison1.png" alt="img1"></li>
+                            <li><img src="img/maison2.png" alt="img3"></li>
+                            <li><img src="img/maison3.png" alt="img1"></li>
+                            <li><img src="img/maison4.png" alt="img3"></li>
+                            <li><img src="img/maison5.png" alt="img1"></li>
+                            <li><img src="img/maison6.png" alt="img3"></li>
+                            <li><img src="img/maison7.png" alt="img1"></li>
+                            <li><img src="img/maison8.png" alt="img3"></li>
+                            <li><img src="img/maison9.png" alt="img1"></li>
+                            <li><img src="img/maison10.png" alt="img3"></li>
+                        </ul> 
+                </div>
+                <p class="ime center" style="font-size: 35px; color: black;">1. MAISON FRANCIS</p>
+            </section>
+
+            <section class="start" style="margin-top: -40px;"> 
+                <div class="pochni | center">
+                    <div class="poch">
+                        <div class="course-coli">
+                            <h3 class="text-center">Baccarat Rouge 540 </h3>
+                            <p class="text-center"> Дрвениот мирис ослободува поетска алхемија, високо кондензиран и графички мирисен потпис. </p>  
+                            <div>
+                                <img src="img/maison1.png" alt="">
+                            </div>
+                        </div>
+                    
+                        <div class="course-coli">
+                             <h3 class="text-center">Feminin Pluriel</h3>
+                             <p class="text-center "> Ветровите аспекти на јасмин, блескавиот шафран ги засилуваат минералните ноти на килибарот.</p>  
+                             <div>
+                                <img src="img/maison9.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="course-coli">
+                            <h3 class="text-center">Grand Soir</h3>
+                            <p class="text-center "> Килибарно-дрвен мирис што е парфем како чоколадна вулканска торта за десерт, чудо на преголема количина.</p>  
+                            <div>
+                                <img src="img/maison3.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="course-coli">
+                            <h3 class="text-center">OUD Silk Mood</h3>
+                            <p class="text-center "> Мирисот е полн со шарм и мистерија, скициран во бугарска роза, со сина камилица од Мароко и папирус.</p>  
+                            <div>
+                                <img src="img/maison5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+            </section> 
+
+
+            <!-- SLIDER -->
+            <section class="two | center" style="margin-top: 90px;">
+                <div class="slid">
+                        <ul class="slider | center">
+                            <li><img src="img/zara1.jpeg" alt="img1"></li>
+                            <li><img src="img/zara2.jpeg" alt="img3"></li>
+                            <li><img src="img/zara3.jpeg" alt="img1"></li>
+                            <li><img src="img/zara4.jpeg" alt="img3"></li>
+                            <li><img src="img/zara5.jpeg" alt="img1"></li>
+                            <li><img src="img/zara6.jpeg" alt="img3"></li>
+                            <li><img src="img/zara7.jpeg" alt="img1"></li>
+                            <li><img src="img/zara8.jpeg" alt="img3"></li>
+                        </ul> 
+                </div>
+                <p class="ime center" style="font-size: 35px; color: black;">2. ZARA</p>
+            </section>
+
+            <section class="start margi" style="margin-top: -40px;"> 
+                <div class="pochni | center">
+                    <div class="poch">
+                        <div class="course-coli">
+                            <h3 class="text-center">Red Vanilla</h3>
+                            <p class="text-center "> Во споредба со Lancome's La Vie Est Belle има ноти на пачули измешани со слатки овошни мириси и вкусна ванила.</p>  
+                            <div>
+                                <img src="img/zara2.jpeg" alt="">
+                            </div>
+                        </div>
+                    
+                        <div class="course-coli">
+                             <h3 class="text-center">Santal Glow</h3>
+                             <p class="text-center "> Ова мириса на опојна сочна речиси сирупска круша. Комбинира мешавина од кардамон и ноти од ирис и виолетова.</p>  
+                             <div>
+                                <img src="img/zara5.jpeg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="course-coli">
+                            <h3 class="text-center">Oriental Summer</h3>
+                            <p class="text-center "> Горните ноти се Фрезија, Роза и Бергамот; средните ноти се ванила и јасмин; основните ноти се карамел, пачули и мошус.</p>  
+                            <div>
+                                <img src="img/zara6.jpeg" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="course-coli">
+                            <h3 class="text-center">Eternal Spring</h3>
+                            <p class="text-center "> Арома нагласена со букет од миризливи слатки цветни, овошни и ароматични мирисни тонови кои ќе донесат светла сензација.</p>  
+                            <div>
+                                <img src="img/zara7.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+            </section> 
+
+            
+            <!-- SLIDER  -->
+            <section class="two | center" style="margin-top: 90px;">
+                <div class="slid">
+                        <ul class="slider | center" style="width: 60%;">
+                            <li><img src="img/dip1.png" alt="img1"></li>
+                            <li><img src="img/dip2.png" alt="img3"></li>
+                            <li><img src="img/dip3.png" alt="img1"></li>
+                            <li><img src="img/dip4.png" alt="img3"></li>
+                            <li><img src="img/dip5.png" alt="img1"></li>
+                            <li><img src="img/dip6.png" alt="img3"></li>
+                            <li><img src="img/dip7.png" alt="img1"></li>
+                            <li><img src="img/dip8.png" alt="img3"></li>
+                            <li><img src="img/dip9.png" alt="img1"></li>
+                            <li><img src="img/dip10.png" alt="img3"></li>
+                        </ul> 
+                </div>
+                <p class="ime center" style="font-size: 35px; color: black;">3. DIPTYQUE</p>
+            </section>
+
+            
+            <section class="start margi" style="margin-top: -40px;"> <!--<span id="dots">...</span><span id="more">  https://www.w3schools.com/howto/howto_js_read_more.asp-->
+                <div class="pochni | center">
+                    <div class="poch">
+                        <div class="course-coli">
+                            <h3 class="text-center">Philosykos</h3>
+                            <p class="text-center "> Oтвора со светла и освежувачка арома на листовите од смоква - кои даваат сладок овошен акцент.</p>  
+                            <div>
+                                <img src="img/dip1.png" alt="">
+                            </div>
+                        </div>
+                    
+                        <div class="course-coli">
+                             <h3 class="text-center">Eau Duelle</h3>
+                             <p class="text-center "> Живописна боја на ладни зачини - кардамон, розова пиперка и шафран - ароматични нијанси на елеми.</p>  
+                             <div>
+                                <img src="img/dip2.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="course-coli">
+                            <h3 class="text-center">Tamdao</h3>
+                            <p class="text-center "> Горните ноти на италијанскиот чемпрес и амбра ги скокоткаат сетилата и ги хипнотизираат.</p>  
+                            <div>
+                                <img src="img/dip3.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="course-coli">
+                            <h3 class="text-center">Doson</h3>
+                            <p class="text-center "> Букетот од тубероза и турска роза изразува сладок вкус освежен со лист од цвет од портокал и бобинки од роза.</p>  
+                            <div>
+                                <img src="img/dip5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </section>
+
+            <div class="center text-center" style="font-size: 50px;"><p>...</p></div>
+
+            <section class="tip" style="margin-top: 80px; margin-bottom: 100px;" >
+                <div class="top" style="display: block; font-size: 37px; padding-left: 300px; padding-bottom: 20px;"><p>ТОП Коментари</p></div>
+                            <div class="course-col text-center center">
+                                <h3 class="name">bridge2h2 4 minutes ago</h3>
+                                <p> Овој материјал е одличен. Во мојата кожа тоа трае многу долго и проектира 3-4 стапки во првите 2 часа најмалку. Неверојатно мириса.<br></p>  
+                            </div>
+                            <div class="course-col text-center center">
+                                <h3 class="name">Afghan 7 minutes ago</h3>
+                                <p> Ако сте го помирисале Авентус, можете да кажете дека ова е инспирирано од него. Од него добивам многу атмосфера на Creed Aventus. Толку многу сум носел авентус што ми се гади од овој мирис lol. Многу сум среќен што добив примерок.<br></p>  
+                            </div>
+                <hr color="grey" width="40%" style="display: block; margin-top:5px; margin-bottom: 100px;">
+            </section>
+
+            <footer>
+                <div class="footer">
+                    <div class="logo-kraj | center">
+                         <img src="img/evs.webp" alt="logo">
+                    </div>
+                    <nav class="footer-nav | center">
+                        <ul class="flow" style="--flow-spacer: 1em" aria-label="Footer" role="list">
+                            <li><a href="novo.html">Почетна</a></li>
+                            <li><a href="shop.html">Продукти</a></li>
+                            <li><a href="about.html">Заедница</a></li>
+                            <li><a href="contact.html">Контакт</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social | center">
+                        <ul class="ult" role="list" aria-label="Social links">
+                            <li><a aria-label="facebook" href="https://www.facebook.com/theperfumeshoponline">
+                                <i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a aria-label="youtube" href="https://www.youtube.com/user/ThePerfumeShopOnline">
+                                <i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a aria-label="twitter" href="https://twitter.com/theperfumeshop">
+                                <i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a aria-label="pinterest" href="https://www.pinterest.com/the_perfume_shop/">
+                                <i class="fa-brands fa-pinterest"></i></a></li>
+                            <li><a aria-label="instagram" href="https://www.instagram.com/theperfumeshop/">
+                                <i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+            <script
+            src="https://code.jquery.com/jquery-3.6.2.min.js"
+            integrity="sha256-2krYZKh//PcchRtd+H+VyyQoZ/e3EcrkxhM8ycwASPA="
+            crossorigin="anonymous"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script rel="javascript" src="./main.js"></script>
+
+            <script>
+                $('.single-item').slick();
+                $('.slider').slick({
+                    arrows: false,
+                    dots: false,
+                    slidesToShow: 5,
+                    speed: 500,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                });
+            </script>
+            </body>
+        </html>
