@@ -1,0 +1,934 @@
+
+/*Box sizing rules */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Remove default margin*/
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd { margin: 0; } 
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'], ol[role='list'] { list-style: none; }
+
+/* Set core root defaults */
+html:focus-within { scroll-behavior: smooth; }
+
+/* Set core body defaults */
+body {
+    overflow-x: hidden;
+    font-family: Garamond, serif;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) { text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img, picture, svg { max-width: 100%; }
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select { font: inherit; }
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within { 
+    scroll-behavior: auto; }
+
+    *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    }
+}
+
+/* general styling */
+p:not([class]) {
+    opacity: 0.7;
+    max-width: 40ch;
+}
+
+p[data-width="wide"] { max-width: 45ch; } 
+
+/*center*/
+.text-center {
+    text-align: justify;
+}
+  
+.text-center p {
+    margin-inline: auto;
+}
+
+.center {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    padding: 20px;
+}
+
+/*Login Form*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(15, 15, 15, 0.9); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.container {
+    display: grid;
+    text-decoration: white;
+    background-color: #000;
+    width: 70%;
+    height: 50%;
+}
+
+.pricni {
+    display: inline-flex; 
+    margin:0 auto; 
+    justify-content: center; 
+    font-size: 18; 
+    width: 100%;
+    gap: 3px;
+}
+
+.log{
+    flex-basis: 33%;
+}
+.sig{
+    flex-basis: 33%;
+}
+.can{
+    flex-basis: 33%;
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: black;
+    margin: 100px auto; /* 15% from the top and centered */
+    border: 1px solid rgb(250, 244, 244);
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+  
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 350px;
+    top: 90px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+
+/* HEADER */
+.head {
+    background-color: #000;
+}
+
+.header {
+    display: block;
+    width: 100%;
+}
+
+.primary {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    display: inline-flex;
+    margin: 0 auto;
+    font-family: Garamond, serif;
+    overflow: hidden;
+    /* justify-content: space-evenly; */
+}
+
+.primary img {
+    display: flex;
+}
+
+.logo {
+    width: 140px;
+    display: inline-flex;
+    margin: auto;
+    margin-left: 23px;
+}
+
+.nav-list {
+    margin-right: 23px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.nav-list a::after{
+    content: '';
+    width: 0%;
+    height: 1.2px;
+    background: darkred;
+    display: block;
+    margin: auto;
+}
+
+.nav-list a:hover::after{
+    width: 97%;
+}
+
+.nav-list li {
+    margin-right: 25px;
+}
+
+.button {
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    width: 80%;
+    cursor: pointer;
+    /*border: 1;
+    border-radius: 100vmax;*/
+    padding: 0.2rem 0.2rem;
+    color: black;
+    background-color: white;
+}
+
+.button[data-type="inverted"] {
+    color: black;
+    background-color: white;
+}
+    
+.button:hover,
+.button:focus-visible {
+    color: darkred;
+}
+    
+.button[data-type="inverted"]:hover,
+.button[data-type="inverted"]:focus-visible{
+    color: darkred;
+    background-color: white;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.primary-navigation {
+    display: none;
+}
+
+/*DROPDOWN*/
+.drop ul li{
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    list-style: none;
+    color: black;
+}
+    
+.nav-item-dropdown:hover > .dropdown-menu, .dropdown-menu:hover {
+    overflow: hidden;
+    display: block!important;
+    opacity: 1;
+}
+
+.dropdown-trigger {
+    position: relative;
+    overflow: hidden;
+}
+    
+.dropdown-trigger:focus, .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-menu::after {
+    content: "";
+    position: relative;
+    font-weight: bold;
+    transform: rotate(90deg); 
+    top: -5px;
+    right: -10px;
+}
+  
+.dropdown-menu {
+    /* background-color: #000; */
+    display: none!important;
+    position: fixed;
+    margin: 0 auto;
+    padding-top: 50px;
+    top: 0;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.5s ease; 
+    width: 200px;
+}
+
+.dropdown-menu-item {
+    position: relative;
+}
+
+.dropdown-menu-item::before {
+    cursor: pointer;
+    padding: 2;
+    text-align: left;
+}
+
+
+/*CTA*/
+#myBtn {
+    color: grey;
+    background-color: transparent;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 99;
+    font-size: 70px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0px;
+    border-radius: 4px;
+}
+  
+#myBtn:hover {
+    color: darkred;
+}
+
+
+/* lorem */
+.lorem {
+    color: white;
+    font-size: 33px;
+    position: absolute;
+    top: 360;
+    text-align: left;
+    padding-left: 150px;
+    width: 30%;
+}
+
+
+/*SLIDER*/
+.two {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.slid {
+    background-color: white;
+    display: block;
+    margin: auto;
+    width: 66.5%;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.2), 0 0 2px 0px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.slid p {
+    display: flex;
+    color: black;
+}
+
+.slick-slide {
+    /* background-color: white; */
+    color: black;
+    margin: auto;
+}
+
+.slider {
+    display: flex;
+    list-style: none;
+}
+
+.slider > * {
+    margin: auto;
+    width: 100%;
+    flex: 0 0 auto;
+}
+/* 
+.slider-content {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 1;
+    padding: 3;
+    justify-content: space-between;
+    text-align: center;
+} */
+
+.slider img {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-inline: auto;
+}
+
+
+/* HR */
+.below {
+    margin-top: -170px;
+    margin-bottom: 15px;
+}
+
+.below0 {
+    margin-top: -200px;
+    margin-bottom: 15px;
+}
+
+.below1 {
+    margin-top: -200px;
+    margin-bottom: 15px;
+}
+
+
+/*ROW*/
+.row {
+    width: 100%;
+    height: 32%;
+    margin-top: 100px;
+    gap: 10px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.course-col {
+    background-color: white;
+    color: black;
+    text-align: justify;
+    flex-basis: 31%;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.2);
+    border-radius: 1px;
+    padding: 20 21;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.5);
+}
+
+.course-coli p{
+    font-size: 19px;
+}
+.course-coli {
+    color: black;
+    text-align: justify;
+    background-color: white;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.2);
+    border-radius: 1px;
+    padding: 20 21;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+
+/*FLEXPIC*/
+.sliki {
+    position: relative;
+    justify-content: center;
+    content: " ";
+    display: inline-flex;
+    margin: auto;
+    width: 100%;
+    gap: 1rem;
+}
+
+.pi{
+    margin-top: 50px;
+}
+
+.ri {
+    width: 100%;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    max-width: 100vw;
+    font-size: 22px; 
+    background-color: black; 
+    color: white;
+    flex-basis: 33%;
+}
+
+.pi{
+    font-size: 35px;
+}
+
+.txt {
+    padding: 50px;
+}
+
+.rir {
+    width: 90%;
+}
+
+.riri {
+    flex-basis: 33%;
+    width: 100%;
+    
+}
+
+
+/* MORE BUTTON */
+.more {
+    /* margin-left: 1150px; */
+    color: black;
+    font-size: 20px;
+}
+
+.more:hover {
+    color: darkred;
+}
+
+
+/* VIDEO */
+.video {
+    background-color: 7 7 7 rgba(7, 7, 7, 0.9);
+    width: 100%;
+    display: block;
+}
+
+
+/*FOOTER*/
+.footer {
+    display: block;
+    justify-content: space-between;
+    background-color: black;
+    margin-top: 100px;
+    margin-bottom: -100px;
+    height: 40%;
+}
+
+.logo-kraj {
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.flow li{ 
+    color: white;  
+    font-size: 17.5px;
+}
+    
+.ult {
+    padding-right: 45px;
+    margin: auto;
+    margin-top: 25px;
+    font-size: 25px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ult li {
+    margin: auto;
+}
+    
+.ult i{
+    color: white;
+    width: 2rem;
+    aspect-ratio: 1;
+}
+    
+.ult i:hover,
+.ult i:focus{
+    color: darkred;
+    /* font-size: 28px; */
+}
+
+.footer-nav {
+    text-align: center;
+    display: block;
+    width: 40%;
+    font-size: 22px;
+}
+
+.footer-nav ul {
+    padding-right: 3rem;
+    columns: 2;
+    margin: auto;
+    display: block;
+}
+
+.footer-nav a{
+    color: white;
+    text-decoration: none;
+}
+    
+.footer-nav a:is(:hover, :focus) {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+/* INDEX HTML */  
+/* NAVIGATION */
+@media (max-width:800px){
+    .primary-navigacija{
+        display: none;
+    }
+
+    .najava .button{
+       display: none;
+    }
+}
+
+@media (max-width: 800px){
+    .primary-navigation {
+      margin-top: 70px;
+      display: none;
+      height: 55%;
+      position: fixed;
+      inset: 7rem var(--size-400) auto;
+      max-width: 25rem;
+      margin-left: auto;
+      background: whitesmoke;
+      border-radius: var(--size-100);
+      box-shadow: black;
+      z-index: 999;
+    }
+
+    .mob .button {
+        background-color: #fff;
+    }
+
+    .primary-navigation li{
+        padding-top: 20px;
+    }
+    
+    .primary-header[data-overlay]::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+    }
+    
+    .nav-lists{
+      display: grid;
+      gap: var(--size-600);
+      text-align: center;
+      font-weight: var(--font-weight-bold);
+    }
+
+    .nav-list a {
+        color:#000;
+    }
+    
+    .primary-navigation[data-visible]{
+      display: block;
+      right: 0;
+    }
+    
+    .mobile-nav-toggle {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      padding: 0.5em;
+    }
+    
+    .mobile-nav-toggle .icon-close {
+      display: none;
+    }
+} 
+
+/* MODAL */
+@media (max-width:800px){
+    .modal-content{
+        width: 100%;
+    }
+
+    .container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pricni{
+        font-size: 15px !important;
+    }
+
+    .modal .close{
+        right: 20px;
+    }
+}
+
+/* SECTION */
+@media (max-width:800px){
+    .opium {
+        padding: 2px;
+    }
+
+    .opium .sliki{
+        display: block;
+    }
+
+    .rir img {
+        height: auto;
+        width: 100%;
+    }
+
+    .ri img{
+        height: auto !important;
+    }
+
+    .ri {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 1px;
+    }
+
+    .pi{
+        margin-top: -80px;
+        text-align: center;
+    }
+
+    .txt {
+        padding: 25px;
+        text-align: justify;
+    }
+
+    .txt1 p{
+        font-size: 30px;
+    }
+
+    .vidi {
+        width: 100%;
+        font-size: 20px !important;
+    }
+
+    div.footer{
+        height: 40%;
+    }
+
+    .footer .logo-kraj{
+        width: 23%;
+    }
+
+    .footer .footer-nav{
+        width: 80%;
+    }
+
+    .footer .social {
+        width: 100%;
+    }
+}
+/* 1440PX */
+@media (max-width:1440px){
+    .pi{
+        margin-top: 30px;
+    }
+    .ri .pi {
+        font-size: 28px;
+    }
+    .sliki .ri{
+    font-size: 22px;
+    }
+    .ri .txt {
+        padding: 10px;
+    }
+    .opium .below0{
+        display: none;
+    }
+
+    .opium .below1{
+        display: none;
+    }
+
+    .opium .below{
+        display: none;
+    }
+}
+/* 1024PX */
+@media (max-width:1024px){
+    .primary .nav-list{
+        font-size: 1rem;
+    }
+
+    .close {
+        right: 230px;
+    }
+
+    .ri .pi {
+        font-size: 22px;
+    }
+    .sliki .ri{
+    font-size: 18px;
+    }
+    .ri .txt {
+        padding: 4px;
+    }
+
+    .vidi {
+        font-size: 24px;
+    }
+}
+/* 475PX */
+@media (max-width: 475px){
+    .footer .logo-kraj {
+        width: 40% !important;
+    }
+}
+/* 320 */
+@media (max-width: 320px){
+    .footer .flow li {
+        font-size: 16px;
+    }
+}
+
+
+/* CONTACT */
+@media (max-width: 1440px){
+    .foot {
+        margin-top: 140px !important;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .odidesno .linija{
+        margin-left: 0px !important;
+    }
+
+    .foot {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width:800px){
+    .odidesno .kont p{
+        margin-left: 1px;
+    }
+}
+
+@media (max-width:425px){
+   
+    .odidesno .kont {
+        width: 100% !important;
+    }
+    .odidesno .kont p{
+        font-size: 22px !important;
+    }
+    .odidesno .linija p{
+        font-size: 17px !important;
+    }
+}
+@media (max-width: 375px){
+    .odidesno {
+        margin-left: 10px !important;
+    }
+    .odidesno .kont p{
+        width: 200px;
+        font-size: 19px !important;
+    }
+}
+
+/* ABOUT */
+@media (max-width: 1024px){
+    .produkt4e {
+        margin-left: 73px !important;
+    }
+}
+
+@media (max-width: 800px){
+    .row {
+        height: auto;
+    }
+
+    .wor {
+        width: 90%;
+        gap: 4rem !important;
+    }
+
+    .course-col {
+        display: block !important;
+    }
+
+    .course-col img{
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
+
+    .produkt4e{
+        margin-left: 53px !important;
+    }
+}
+
+@media (max-width: 500px){
+    .abo {
+        font-size: 30px !important;
+    }
+    .row {
+        width: 80% !important;
+        display: block;
+    }
+    .row .course-coli{
+        margin-top: 10px;
+    }
+    .produkt4e{
+        width: 60% !important;
+        display: block !important;
+    }
+    .produkt4e img {
+        margin-left: 35px;
+        margin-top: 10px;
+    }
+    .klasa p{
+        font-size: 30px !important;
+    }
+    .wor {
+        width: 70% !important;
+    }
+    .klasa .minus {
+        margin-top:  20px !important;
+        margin-left: 0px !important;
+    }
+    .course-col img{
+        width: 50% !important;
+    }
+    .eden p{
+        font-size: 15px !important;
+    }
+}

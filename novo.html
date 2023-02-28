@@ -1,0 +1,202 @@
+<DOCTYPE HTML>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>WEB</title>
+            <link rel="stylesheet" href="styles.css">
+            <link rel="about" href="about.html">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+
+        <body>
+                <header>
+                    <div class="primary">
+                        <div class="logo center"><img src="img/evs.webp" alt="Logo"></div>
+                        <nav class="nav-list">
+                            <nav class="primary-navigacija">
+                                <ul class="nav-lists" area-label="navigation" role="list">
+                                    <i class="fas" onclick="hideMenu()"></i>
+                                    <li><a href="novo.html">ПOЧЕТНА </a></li>
+                                        <!-- Dropdown menu -->
+                                        <div class="drop" style="display: inline-block;">
+                                        <li class="nav-item nav-item-dropdown" >
+                                            <a class="dropdown-trigger" href="#" style="color: white;">ПРОДАВНИЦА</a>
+                                            <ul class="dropdown-menu" style="color: black;">
+                                                <li class="dropdown-menu-item"><a href="shop.html">EVA</a></li>
+                                                <li class="dropdown-menu-item"><a href="blog.html">СПИСАНИЕ</a></li>
+                                            </ul>
+                                        </li>
+                                        </div> 
+                                    <li><a href="about.html">ЗА НАС </a></li>
+                                    <li><a href="contact.html">КОНТАКТ </a></li>                
+                                </ul>
+                            </nav>
+                                <i class="fas" onclick="showMenu()"></i>
+                        </nav>
+
+                        <!-- mobile -->
+                        <div class="primary-header">
+                            <div class="container">
+                                <div class="nav-wrapper">
+                                    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                                        <img class="icon-hamburger" src="img/icon-hamburger.svg" alt="" aria-hidden="true">
+                                        <img class="icon-close" src="img/icon-close.svg" alt="" aria-hidden="true">
+                                    </button>
+                                    <nav class="primary-navigation" id="primary-navigation">
+                                        <ul area-label="Primary" role="list" class="nav-list">
+                                            <i class="fas" onclick="hideMenu()"></i>
+                                            <li><a href="novo.html">ПOЧЕТНА </a></li>
+                                            <li><a href="shop.html">EVA</a></li>
+                                            <li><a href="blog.html">СПИСАНИЕ</a></li>
+                                            <li><a href="about.html">ЗА НАС </a></li>
+                                            <li><a href="contact.html">КОНТАКТ </a></li>  
+                                            <li>
+                                                <div class="mob" style="padding-right: 11px;"> 
+                                                    <button class="naj button" data-type="inverted" style="font-size: 1.2rem; margin-right: 80px;" onclick="document.getElementById('id01').style.display='block'">Најави се</button>
+                                                    <div id="id01" class="modal | center | text-center">
+                                                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                                    <form class="modal-content animate | center | text-center">
+                                                    <div class="container | center | text-center" style="color: white; font-size: 20px;">
+                                                    <label for="uname"><b>Корисничко Име</b></label>
+                                                    <input type="text" placeholder="Enter Username" name="uname" required><br>
+                                                    <label for="psw"><b>Лозинка</b></label>
+                                                    <input type="password" placeholder="Enter Password" name="psw" required><br>
+                                                    <div class="pricni center">
+                                                        <button type="submit" class="log">Најави се</button>
+                                                        <button type="submit" class="sig">Креирај Профил</button>
+                                                        <button type="button" class="can" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Откажи</button>
+                                                    </div>
+                                                    </div>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                            </li>              
+                                        </ul>
+                                    </nav>
+                                             <i class="fas" onclick="showMenu()"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="najava" style="padding-right: 11px; margin-top: 13px;"> 
+                            <button class="button" data-type="inverted" style="font-size: 1.2rem; margin-right: 80px;" onclick="document.getElementById('id02').style.display='block'">Најави се</button>
+                            <div id="id02" class="modal | center | text-center" style="display: block;">
+                            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <form class="modal-content animate | center | text-center">
+                            <div class="container | center | text-center" style="color: white; font-size: 20px;">
+                            <label for="uname"><b>Корисничко Име</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required><br>
+                            <label for="psw"><b>Лозинка</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required><br>
+                            <div class="pricni center">
+                                <button type="submit" class="log">Најави се</button>
+                                <button type="submit" class="sig">Креирај Профил</button>
+                                <button type="button" class="can" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Откажи</button>
+                            </div>
+                            </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+            <div><button onclick="topFunction()" id="myBtn" title="Go to top">^</button></div>
+
+            <div style="width: 100%;"><img src="./img/pexels-tarek-shahin-12428350.jpg" alt=""></div>
+
+            <div class="txt1 center text-center" style="font-size: 35px; width: 100%; margin-top: 80px;"><p>Пронајдете го мирисот на вашиот потпис.</p></div>
+    
+
+            <!-- SECTION -->
+            <section style="margin-top: 80px; background-color: #333333" class="opium"> 
+                <div class="sliki | center">
+                    <div class="ri">
+                        <img src="img/crno.webp" alt="riri">
+                    </div>
+                    <div class="ri text-center">
+                        <div><p class="pi center text-center">Ив Сен Лоран</p></div>
+                        <p class="txt">Опиумот е ориентално-зачинет парфем создаден за модниот бренд Yves Saint Laurent од парфимерот Jean Amic и Jean-Louis Sieuzac од Roure, првпат во 1977 година.</p>
+                        <hr class="below0" color="grey" width="80%">
+                    </div>
+                    <div class="ri">
+                        <img src="img/black.jpg" alt="riri" height="100%">
+                    </div>
+                </div>
+            </section>
+
+            <div class="txt1 center text-center" style="font-size: 35px; margin-top: 80px;"><p>Се што ви треба е<p style="color: darkred;">љубов...</p></p></div>
+
+            <!-- SECTION -->
+            <section style="margin-top: 80px; width: 100%; background-color: #333333" class="opium"> 
+                    <div class="sliki | center">
+                        <div class="ri">
+                            <img src="img/ads.webp" alt="riri">
+                        </div>
+                        <div class="ri text-center">
+                            <div><p class="pi center text-center">Френсис Куркџијан</p></div>
+                            <p class="txt">Мизон Френсис Куркџијан е нов бренд за мириси. Најраното издание е создадено во 2009 година, а најновото е од 2022 година. Тој кој работеше на мирисите е Куркџијан.</p>
+                            <hr class="below1" color="grey" width="80%">
+                        </div>
+                        <div class="ri">
+                            <img src="img/ad.webp" alt="riri">
+                        </div>
+                    </div> 
+            </section>
+
+            <div class="txt1 center text-center" style="font-size: 35px; margin-top: 80px;"><p>и нов ПАРФЕМ!</p></div>
+
+            <!-- SECTION -->
+            <section style="margin-top: 80px; background-color: #333333;" class="opium"> 
+                <div class="sliki | center">
+                    <div class="riri">
+                        <img src="img/613uB2c5yIL.jpg" alt="" >
+                    </div>
+                    <div class="ri | text-center">
+                        <p class="pi center text-center">Џорџо Армани</p>
+                        <p class="txt">Џорџо Армани S.p.A. е италијанска луксузна модна куќа основана во Милано од Џорџо Армани, која дизајнира, произведува, дистрибуира и продава висока мода..</p>
+                        <hr class="below" color="grey" width="80%">
+                    </div>
+                    <div class="riri">
+                        <img src="img/p469176-av-23-zoom.webp" alt="riri">
+                    </div>
+                </div>
+            </section>
+
+            
+            <a href="blog.html" class="center" style="width: 25%; font-size: 27px; margin-top: 80px; padding: 2px;">
+                <button class="vidi button">Види Повеќе</button>
+            </a>
+
+
+            <footer style="margin-top: 80px;">
+                <div class="footer">
+                    <div class="logo-kraj | center"><img src="img/evs.webp" alt="logo"></div>
+                    <nav class="footer-nav | center">
+                        <ul class="flow" style="--flow-spacer: 1em" aria-label="Footer" role="list">
+                            <li><a href="novo.html">Почетна</a></li>
+                            <li><a href="shop.html">Продукти</a></li>
+                            <li><a href="about.html">Заедница</a></li>
+                            <li><a href="contact.html">Контакт</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social | center">
+                        <ul class="ult" role="list" aria-label="Social links">
+                            <li><a aria-label="facebook" href="https://www.facebook.com/theperfumeshoponline" target="_blank">
+                                <i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a aria-label="twitter" href="https://twitter.com/theperfumeshop" target="_blank">
+                                <i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a aria-label="instagram" href="https://www.instagram.com/theperfumeshop/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a aria-label="youtube" href="https://www.youtube.com/user/ThePerfumeShopOnline" target="_blank">
+                                <i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a aria-label="pinterest" href="https://www.pinterest.com/the_perfume_shop/" target="_blank">
+                                <i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+            <script rel="javascript" src="./main.js"></script>
+        </body>
+    </html>
